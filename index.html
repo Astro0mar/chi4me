@@ -28,7 +28,7 @@
                 background: black;
                 color: white;
                 font-weight: bold;
-                font-family: ""SimSun"", sans-serif;
+                font-family: "AR PL New Kai", sans-serif;
             }
             #info .level {
                font-size: 50%;
@@ -48,10 +48,10 @@
                 min-width: 150px;
                 color: black;
                 font-size: 150%;
-                font-family: ""Microsoft YaHei Leight"", sans-serif;
+                font-family: "sans", sans-serif;
             }
         </style>
-        <script src="confusibleorder_pleco_a1.js"></script>
+        <script src="confusibleorder_a4.js"></script>
         <script
           src="https://code.jquery.com/jquery-3.4.1.min.js"
           integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
@@ -83,7 +83,7 @@ function showinfo(event) {
         $('#description').html(data[i].description);
         var words = "";
         for (j = 0; j < data[i].words.length; j++) {
-            worddata = dictwords[data[i].words[j]];
+            worddata = hskwords[data[i].words[j]];
             words += "<span class='level' onclick='showextra(" + j + "); event.stopPropagation();'>(" + worddata.level + ")</span> <span class='hanzi' onclick='showextra(" + j + "); event.stopPropagation();'>" + worddata.hanzi + "</span>";
             var cls = "pinyin";
             if (!infopinyin) cls += " hidden";
@@ -136,7 +136,11 @@ $(function() {
     <div id="words">
     </div>
 </div>
-<object type="image/svg+xml" data="confusibleorder_pleco_a1_1.svg" id="page1" onload="initpage(1)"></object>
+<object type="image/svg+xml" data="confusibleorder_a4_1.svg" id="page1" onload="initpage(1)"></object>
+<object type="image/svg+xml" data="confusibleorder_a4_2.svg" id="page2" onload="initpage(2)"></object>
+<object type="image/svg+xml" data="confusibleorder_a4_3.svg" id="page3" onload="initpage(3)"></object>
+<object type="image/svg+xml" data="confusibleorder_a4_4.svg" id="page4" onload="initpage(4)"></object>
+<object type="image/svg+xml" data="confusibleorder_a4_5.svg" id="page5" onload="initpage(5)"></object>
 
 <div class="buttons">
 Info: pinyin? <input type="checkbox" id="infopinyin" name="infopinyin" /> | translations? <input type="checkbox" id="infotranslation" name="infotranslation" />
